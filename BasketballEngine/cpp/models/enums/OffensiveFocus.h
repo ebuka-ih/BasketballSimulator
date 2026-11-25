@@ -1,0 +1,14 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_OFFENSIVEFOCUS_H
+#define BASKETBALLENGINE_OFFENSIVEFOCUS_H
+enum class OffensiveFocus {
+    PAINT,
+    MID_RANGE,
+    THREE_POINT,
+    FOUR_POINT,
+    BALANCED
+};
+#endif //BASKETBALLENGINE_OFFENSIVEFOCUS_H

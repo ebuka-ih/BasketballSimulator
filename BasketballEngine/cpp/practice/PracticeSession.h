@@ -1,0 +1,13 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_PRACTICESESSION_H
+#define BASKETBALLENGINE_PRACTICESESSION_H
+
+
+class PracticeSession {
+};
+
+
+#endif //BASKETBALLENGINE_PRACTICESESSION_H

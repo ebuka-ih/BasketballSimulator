@@ -1,0 +1,17 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_SHOTZONE_H
+#define BASKETBALLENGINE_SHOTZONE_H
+
+enum class ShotZone {
+    CLOSE_RANGE,
+    MID_RANGE,
+    DEEP_TWO,
+    THREE_POINT,
+    DEEP_THREE,
+    FOUR_POINT,
+    DEEP_FOUR
+};
+#endif //BASKETBALLENGINE_SHOTZONE_H

@@ -1,0 +1,13 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_MATCHUPANALYSIS_H
+#define BASKETBALLENGINE_MATCHUPANALYSIS_H
+
+
+class MatchupAnalysis {
+};
+
+
+#endif //BASKETBALLENGINE_MATCHUPANALYSIS_H

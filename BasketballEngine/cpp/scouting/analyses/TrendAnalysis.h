@@ -1,0 +1,13 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_TRENDANALYSIS_H
+#define BASKETBALLENGINE_TRENDANALYSIS_H
+
+
+class TrendAnalysis {
+};
+
+
+#endif //BASKETBALLENGINE_TRENDANALYSIS_H

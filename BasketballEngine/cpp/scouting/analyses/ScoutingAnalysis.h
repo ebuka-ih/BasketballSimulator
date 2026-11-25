@@ -1,0 +1,13 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_SCOUTINGANALYSIS_H
+#define BASKETBALLENGINE_SCOUTINGANALYSIS_H
+
+
+class ScoutingAnalysis {
+};
+
+
+#endif //BASKETBALLENGINE_SCOUTINGANALYSIS_H

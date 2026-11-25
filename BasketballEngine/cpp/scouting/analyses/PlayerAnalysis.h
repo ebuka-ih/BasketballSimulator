@@ -1,0 +1,13 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_PLAYERANALYSIS_H
+#define BASKETBALLENGINE_PLAYERANALYSIS_H
+
+
+class PlayerAnalysis {
+};
+
+
+#endif //BASKETBALLENGINE_PLAYERANALYSIS_H

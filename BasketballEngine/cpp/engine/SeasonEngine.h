@@ -1,0 +1,13 @@
+//
+// Created by william on 11/21/2026.
+//
+
+#ifndef BASKETBALLENGINE_SEASONENGINE_H
+#define BASKETBALLENGINE_SEASONENGINE_H
+
+
+class SeasonEngine {
+};
+
+
+#endif //BASKETBALLENGINE_SEASONENGINE_H

@@ -1,0 +1,18 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_PLAYROLE_H
+#define BASKETBALLENGINE_PLAYROLE_H
+
+enum class PlayRole {
+    BALL_HANDLER,
+    SCREENER,
+    ROLL_MAN,
+    POP_MAN,
+    PRIMARY_SCORER,
+    SPOT_UP_SHOOTER,
+    POST_UP_PLAYER,
+    REBOUND_SPECIALIST
+};
+#endif //BASKETBALLENGINE_PLAYROLE_H

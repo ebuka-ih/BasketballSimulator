@@ -1,0 +1,12 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_BALLMOVEMENT_H
+#define BASKETBALLENGINE_BALLMOVEMENT_H
+enum class BallMovement {
+    ISOLATION_HEAVY,
+    MODERATE,
+    PASSING_HEAVY
+};
+#endif //BASKETBALLENGINE_BALLMOVEMENT_H

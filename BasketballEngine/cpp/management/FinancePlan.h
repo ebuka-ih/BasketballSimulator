@@ -1,0 +1,13 @@
+//
+// Created by william on 11/21/2026.
+//
+
+#ifndef BASKETBALLENGINE_FINANCEPLAN_H
+#define BASKETBALLENGINE_FINANCEPLAN_H
+
+
+class FinancePlan {
+};
+
+
+#endif //BASKETBALLENGINE_FINANCEPLAN_H

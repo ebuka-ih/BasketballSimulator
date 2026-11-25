@@ -1,0 +1,13 @@
+//
+// Created by william on 11/21/2026.
+//
+
+#ifndef BASKETBALLENGINE_GENERALMANAGER_H
+#define BASKETBALLENGINE_GENERALMANAGER_H
+
+
+class GeneralManager {
+};
+
+
+#endif //BASKETBALLENGINE_GENERALMANAGER_H

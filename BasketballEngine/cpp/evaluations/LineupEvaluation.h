@@ -1,0 +1,13 @@
+//
+// Created by william on 11/21/2026.
+//
+
+#ifndef BASKETBALLENGINE_LINEUPEVALUATION_H
+#define BASKETBALLENGINE_LINEUPEVALUATION_H
+
+
+class LineupEvaluation {
+};
+
+
+#endif //BASKETBALLENGINE_LINEUPEVALUATION_H

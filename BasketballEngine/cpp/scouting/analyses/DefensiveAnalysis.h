@@ -1,0 +1,13 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_DEFENSIVEANALYSIS_H
+#define BASKETBALLENGINE_DEFENSIVEANALYSIS_H
+
+
+class DefensiveAnalysis {
+};
+
+
+#endif //BASKETBALLENGINE_DEFENSIVEANALYSIS_H

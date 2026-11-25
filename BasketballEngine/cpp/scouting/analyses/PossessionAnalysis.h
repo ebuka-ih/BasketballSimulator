@@ -1,0 +1,13 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_POSSESSIONANALYSIS_H
+#define BASKETBALLENGINE_POSSESSIONANALYSIS_H
+
+
+class PossessionAnalysis {
+};
+
+
+#endif //BASKETBALLENGINE_POSSESSIONANALYSIS_H

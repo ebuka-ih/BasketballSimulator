@@ -1,0 +1,14 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_DRILLINTENSITY_H
+#define BASKETBALLENGINE_DRILLINTENSITY_H
+enum class DrillIntensity {
+    VERY_LIGHT,
+    LIGHT,
+    MODERATE,
+    HIGH,
+    VERY_HIGH
+};
+#endif //BASKETBALLENGINE_DRILLINTENSITY_H

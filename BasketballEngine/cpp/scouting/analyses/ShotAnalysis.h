@@ -1,0 +1,13 @@
+//
+// Created by william on 11/22/2026.
+//
+
+#ifndef BASKETBALLENGINE_SHOTANALYSIS_H
+#define BASKETBALLENGINE_SHOTANALYSIS_H
+
+
+class ShotAnalysis {
+};
+
+
+#endif //BASKETBALLENGINE_SHOTANALYSIS_H
