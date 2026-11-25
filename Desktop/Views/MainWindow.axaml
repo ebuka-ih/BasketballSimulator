@@ -1,0 +1,217 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:BasketballEngine.Desktop.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:Basketball.Controls"
+        mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+        x:Class="BasketballEngine.Desktop.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="BasketballEngine.Desktop"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        Background="#38342a">
+    <Grid>
+        <Viewbox 
+            MaxWidth="550"
+            Stretch="Uniform"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top">
+            <Grid RowDefinitions="Auto,*,Auto">
+                    <Grid Grid.Row="0" Width="275" Height="50">
+                        <Grid>
+                            <Border
+                                Background="#0d1321"
+                                Width="100"
+                                Height="50"
+                                HorizontalAlignment="Left">
+                                <TextBlock
+                                    x:Name="AwayScore"
+                                    Text="102"
+                                    FontSize="25"
+                                    FontFamily="{StaticResource BarlowBold}"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    Margin="0,0,7.5,0"/>
+                            </Border>
+                            <Border
+                                Background="#0d1321"
+                                Width="100"
+                                Height="50"
+                                HorizontalAlignment="Right">
+                                <TextBlock
+                                    x:Name="HomeScore"
+                                    Text="102"
+                                    FontSize="25"
+                                    FontFamily="{StaticResource BarlowBold}"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    Margin="7.5,0,0,0"/>
+                            </Border>
+                            <Border
+                                Background="#d9c5c3"
+                                Opacity="0.25"
+                                Width="175"
+                                Height="0.0005"
+                                HorizontalAlignment="Center"
+                                Margin="0,30,0,0">
+                            </Border>  
+                            <Border
+                                Background="#d9c5c3"
+                                Opacity="0.25"
+                                Width="175"
+                                Height="0.0005"
+                                HorizontalAlignment="Center"
+                                Margin="0,0,0,30">
+                            </Border>  
+                            <Border
+                                Background="#0a1e3d"
+                                Width="75"
+                                Height="50"
+                                HorizontalAlignment="Center">
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Top" Spacing="6">
+                                    <TextBlock
+                                        x:Name="GamePhase"
+                                        Foreground="Red"
+                                        Text="⦿ Live"
+                                        FontSize="7"
+                                        FontFamily="{StaticResource BarlowBold}"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Top"/>
+                                    <TextBlock
+                                        x:Name="GameTime"
+                                        Text="Waiting..."
+                                        FontSize="14"
+                                        FontFamily="{StaticResource BarlowBold}"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"/>
+                                    <Grid>
+                                        <Border
+                                            Background="#020b1a"
+                                            Width="37.5"
+                                            Height="10"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Bottom"
+                                            Margin="0,0,0,-11.8">
+                                            <TextBlock
+                                                x:Name="ShotClock"
+                                                Text=":24"
+                                                FontSize="10"
+                                                FontFamily="{StaticResource BarlowBold}"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Bottom"/>
+                                        </Border>
+                                        <Border
+                                            Width="1"
+                                            Height="10"
+                                            Background="DarkSlateGray"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Bottom"
+                                            Margin="0,0,0,-11.8"/>
+                                        <Border
+                                            Background="#020b1a"
+                                            Width="37.5"
+                                            Height="10"
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Bottom"
+                                            Margin="0,0,0,-11.8">
+                                            <TextBlock
+                                                x:Name="Period"
+                                                Text="1Q"
+                                                FontSize="10"
+                                                FontFamily="{StaticResource BarlowBold}"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Bottom"/>
+                                        </Border>
+                                    </Grid>
+                                </StackPanel>
+                                
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </Grid>
+        </Viewbox>
+        <Viewbox
+            MaxWidth="1282.5"
+            Stretch="Uniform"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <Border BorderBrush="White" BorderThickness="2">
+                <Grid Width="950" Height="510" Background="#e8ba6f">
+                    <Border VerticalAlignment="Center" HorizontalAlignment="Center" Height="510" Width="2" Background="White"></Border>
+                    <!-- Paint -->
+                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Width="188.33" Height="169" Background="#5468cc"  Margin="0,0,0,0"/>
+                    <Border VerticalAlignment="Top" HorizontalAlignment="Left" Height="2" Width="188.33" Background="White" Margin="0, 170, 0, 0"></Border>
+                    <Border VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="2" Width="188.33" Background="White" Margin="0, 0, 0, 170"></Border>
+                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="169" Width="2" Background="White" Margin="188.33, 0, 0, 0"></Border>
+                    <Ellipse VerticalAlignment="Center" HorizontalAlignment="Left" Height="60" Width="60" StrokeThickness="2" Stroke="White" Margin="158.33, 0, 0, 0"></Ellipse>
+                    <!-- 3 pt -->
+                    <Border VerticalAlignment="Top" HorizontalAlignment="Left" Height="2" Width="140" Background="White" Margin="0, 50, 0, 0"></Border>
+                    <Border VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="2" Width="140" Background="White" Margin="0, 0, 0, 50"></Border>
+                    <Arc
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Width="410"
+                        Height="410"
+                        StartAngle="270"
+                        SweepAngle="180"
+                        Stroke="White"
+                        StrokeThickness="2"
+                        StrokeLineCap="Round"
+                        Margin="-65,0,0,0"/>
+                    
+                    <Border VerticalAlignment="Top" HorizontalAlignment="Right" Height="2" Width="140" Background="White" Margin="0, 50, 0, 0"></Border>
+                    <Border VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="2" Width="140" Background="White" Margin="0, 0, 0, 50"></Border>
+                    <Arc
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Width="410"
+                        Height="410"
+                        StartAngle="90"
+                        SweepAngle="180"
+                        Stroke="White"
+                        StrokeThickness="2"
+                        StrokeLineCap="Round"
+                        Margin="0,0,-65,0"/>
+                    <!-- 4 pt -->
+                    <Border VerticalAlignment="Top" HorizontalAlignment="Left" Height="2" Width="140" Background="White" Margin="0, 20, 0, 0"></Border>
+                    <Border VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="2" Width="140" Background="White" Margin="0, 0, 0, 20"></Border>
+                    <Arc
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Width="470"
+                        Height="470"
+                        StartAngle="270"
+                        SweepAngle="180"
+                        Stroke="White"
+                        StrokeThickness="2"
+                        StrokeLineCap="Round"
+                        Margin="-95,0,0,0"/>
+                    
+                    <Border VerticalAlignment="Top" HorizontalAlignment="Right" Height="2" Width="140" Background="White" Margin="0, 20, 0, 0"></Border>
+                    <Border VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="2" Width="140" Background="White" Margin="0, 0, 0, 20"></Border>
+                    <Arc
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Width="470"
+                        Height="470"
+                        StartAngle="90"
+                        SweepAngle="180"
+                        Stroke="White"
+                        StrokeThickness="2"
+                        StrokeLineCap="Round"
+                        Margin="0,0,-95,0"/>
+                    <!-- Baskets -->
+                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="3" Width="3" CornerRadius="3" Background="Indigo" Margin="13.25, .20, 0, 0"></Border>
+                    <Border VerticalAlignment="Center" HorizontalAlignment="Right" Height="3" Width="3" CornerRadius="3" Background="Indigo" Margin="0, .20, 13.25, 0"></Border>
+                    
+                    <!-- Halfcourt -->
+                    <Ellipse VerticalAlignment="Center" HorizontalAlignment="Center" Height="150" Width="150" StrokeThickness="2" Stroke="White"></Ellipse>
+                    <Ellipse VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" Width="60" StrokeThickness="2" Stroke="White"></Ellipse>
+                    <controls:CourtGridControl x:Name="CourtGrid"/>
+                </Grid>
+            </Border>
+        </Viewbox>
+    </Grid>
+</Window>
