@@ -4,6 +4,9 @@
 
 #ifndef BASKETBALLENGINE_OFFENSIVEPLAYBOOK_H
 #define BASKETBALLENGINE_OFFENSIVEPLAYBOOK_H
+#include <vector>
+
+#include "OffensivePlay.h"
 using namespace std;
 
 class OffensivePlaybook {

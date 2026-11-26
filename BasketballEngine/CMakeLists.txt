@@ -30,5 +30,19 @@ add_library(BasketballEngine SHARED library.cpp
         BasketballEngine.h
         cpp/game/objects/Ball.cpp
         snapshots/GameSnapshot.h
-        snapshots/GameSnapshot.h
-        cpp/pathfinder/Pathfinder.cpp)
+        cpp/pathfinder/Pathfinder.cpp
+        cpp/logic/CoachLogic.h
+        cpp/logic/CoachLogic.h
+        cpp/logic/CoachLogic.cpp
+        cpp/logic/AnalystLogic.cpp
+        cpp/logs/PossessionLog.cpp
+        cpp/management/Analyst.cpp
+        cpp/management/Contract.cpp
+        cpp/management/FinancePlan.cpp
+        cpp/management/GeneralManager.cpp
+        cpp/game/Possession.h
+        cpp/game/Possession.cpp
+        cpp/models/OffensivePlay.cpp
+        cpp/models/OffensivePlaybook.cpp
+        cpp/models/OffensiveScheme.cpp
+        cpp/player/PlayAssignment.cpp)

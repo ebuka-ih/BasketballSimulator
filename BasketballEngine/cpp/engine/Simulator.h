@@ -7,6 +7,23 @@
 
 
 class Simulator {
+    void initializeSimulator();
+    void simulateSeason(Season season);
+    void simulateGame();
+    void simulateRegularSeason();
+    void simulatePlayoffs();
+
+    void advanceDay();
+    void advanceWeek();
+    void advanceToNextGame();
+
+    void simulateGameAtRegular();
+
+    void pause();
+    void resume();
+    void stop();
+
+    void setSimulationSpeed();
 };
 
 

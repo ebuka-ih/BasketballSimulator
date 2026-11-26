@@ -75,7 +75,6 @@ public:
 
     void setHome(Team& home);
     void setAway(Team& away);
-    void setArena(Arena& arena);
 
     [[nodiscard]] int getId() const { return id; }
     [[nodiscard]] Team* getWinner() const { return winner; }
@@ -95,7 +94,7 @@ public:
     [[nodiscard]] int getQuarter() const { return quarter; }
     [[nodiscard]] string getPeriodString() const;
 
-    string getPhaseString() const;
+    [[nodiscard]] string getPhaseString() const;
 
     [[nodiscard]] int getHomeScore() const { return homeScore; }
     [[nodiscard]] int getAwayScore() const { return awayScore; }

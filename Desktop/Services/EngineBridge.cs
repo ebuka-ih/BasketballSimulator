@@ -6,10 +6,10 @@ namespace Basketball.Services;
 
 public static class EngineBridge
 {
-    [DllImport(@"C:\Users\william\CLionProjects\BasketballEngine\cmake-build-debug\BasketballEngine.dll", CallingConvention = CallingConvention.Cdecl)]
+    [DllImport(@"C:\Users\william\OneDrive\Documents\BasketballSimulator\BasketballEngine\cmake-build-debug\BasketballEngine.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern void hello();
 
-    [DllImport(@"C:\Users\william\CLionProjects\BasketballEngine\cmake-build-debug\BasketballEngine.dll", EntryPoint = "getGameClockText", CallingConvention = CallingConvention.Cdecl)]
+    [DllImport(@"C:\Users\william\OneDrive\Documents\BasketballSimulator\BasketballEngine\cmake-build-debug\BasketballEngine.dll", EntryPoint = "getGameClockText", CallingConvention = CallingConvention.Cdecl)]
     private static extern void GetGameClockText(int gameId, StringBuilder buffer, int bufferSize);
     
     public static string GetGameClockTextImp(int gameId)
@@ -19,7 +19,7 @@ public static class EngineBridge
         return buffer.ToString();
     }
 
-    [DllImport(@"C:\Users\william\CLionProjects\BasketballEngine\cmake-build-debug\BasketballEngine.dll",
+    [DllImport(@"C:\Users\william\OneDrive\Documents\BasketballSimulator\BasketballEngine\cmake-build-debug\BasketballEngine.dll",
         EntryPoint = "GetGameSnapshot", CallingConvention = CallingConvention.Cdecl)]
     public static extern bool GetGameSnapshot(int gameId, out GameSnapshot snapshot);
 }
