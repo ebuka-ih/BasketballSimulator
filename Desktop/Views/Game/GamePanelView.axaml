@@ -1,0 +1,107 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="BasketballEngine.Desktop.Views.Game.GamePanelView">
+    <Grid Width="800" Height="800">
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled">
+            <ItemsControl x:Name="ActiveGames">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Padding="100"
+                            Background="#1c1f1d"
+                            CornerRadius="6"
+                            Margin="10">
+                            <Grid ColumnDefinitions="*,Auto,*">
+                                <StackPanel
+                                    Grid.Column="0"
+                                    HorizontalAlignment="Left">
+                                    <TextBlock
+                                        x:Name="HomeTeam"
+                                        Text="Banana"
+                                        FontSize="18"
+                                        FontWeight="Bold"/>
+                                    <TextBlock
+                                        HorizontalAlignment="Center"
+                                        x:Name="HomeWinLoss"
+                                        FontSize="14"
+                                        FontFamily="{StaticResource Barlow}"
+                                        Text="0 - 1"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Orientation="Vertical">
+                                    <Grid Grid.Column="1"
+                                          ColumnDefinitions="*,Auto,*">
+                                        <TextBlock 
+                                            x:Name="HomeScore"
+                                            Text="89"
+                                            FontFamily="{StaticResource BarlowCondensed}"
+                                            FontSize="47"
+                                            FontWeight="Bold"
+                                            HorizontalAlignment="Right"/>
+                                        <TextBlock 
+                                            Grid.Column="1"
+                                            Text="-"
+                                            FontFamily="{StaticResource BarlowCondensed}"
+                                            FontSize="47"
+                                            FontWeight="Bold"
+                                            Margin="6,0,6,0"/>
+
+                                        <TextBlock
+                                            Grid.Column="2"
+                                            x:Name="AwayScore" 
+                                            Text="102"
+                                            FontFamily="{StaticResource BarlowCondensed}"
+                                            FontSize="47"
+                                            FontWeight="Bold"
+                                            HorizontalAlignment="Left"/>
+                                    </Grid>
+                                    <ProgressBar Minimum="0" Maximum="100" Value="2" Width="400" Height="5" Margin="0,10,0,0" Foreground="AliceBlue" Background="Black"/>
+                                    <Border HorizontalAlignment="Center" 
+                                            BorderBrush="Red" 
+                                            Background="Red"
+                                            Opacity="75"
+                                            BorderThickness="1" 
+                                            CornerRadius="12" 
+                                            Padding="6,2"
+                                            Margin="0,10,0,0">
+                                        <TextBlock 
+                                            Text="In Progress" 
+                                            Foreground="White"
+                                            FontFamily="{StaticResource BarlowCondensed}" 
+                                            FontWeight="Bold"
+                                            TextWrapping="Wrap"></TextBlock>
+                                    </Border>
+                                    <Button x:Name="Spectate"
+                                            HorizontalAlignment="Center"
+                                            Margin="0, 20, 0, 0"
+                                            Content="Spectate">
+                                    </Button>
+                                </StackPanel>
+                                <StackPanel
+                                    Grid.Column="2"
+                                    HorizontalAlignment="Right">
+                                    <TextBlock
+                                        x:Name="AwayTeam"
+                                        FontSize="18"
+                                        FontWeight="Bold"
+                                        FontFamily="{StaticResource Barlow}"
+                                        Text="Apple"/>
+                                    <TextBlock
+                                        HorizontalAlignment="Center"
+                                        x:Name="AwayWinLoss"
+                                        FontSize="14"
+                                        FontFamily="{StaticResource BarlowCondensed}"
+                                        FontWeight="Black"
+                                        Text="1 - 1"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

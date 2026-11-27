@@ -14,8 +14,11 @@
     </Application.Styles>
     
     <Application.Resources>
-        <FontFamily x:Key="BarlowBold">
+        <FontFamily x:Key="Barlow">
             avares://BasketballEngine.Desktop/Assets/fonts/Barlow#Barlow
+        </FontFamily>
+        <FontFamily x:Key="BarlowCondensed">
+            avares://BasketballEngine.Desktop/Assets/fonts/BarlowCondensed#Barlow Condensed
         </FontFamily>
         <Bitmap x:Key="CourtFloor">
             avares://BasketballEngine.Desktop/Assets/images/court.jpg

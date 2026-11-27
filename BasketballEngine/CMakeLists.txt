@@ -35,7 +35,7 @@ add_library(BasketballEngine SHARED library.cpp
         cpp/logic/CoachLogic.h
         cpp/logic/CoachLogic.cpp
         cpp/logic/AnalystLogic.cpp
-        cpp/logs/PossessionLog.cpp
+        cpp/game_logs/PossessionLog.cpp
         cpp/management/Analyst.cpp
         cpp/management/Contract.cpp
         cpp/management/FinancePlan.cpp
@@ -45,4 +45,7 @@ add_library(BasketballEngine SHARED library.cpp
         cpp/models/OffensivePlay.cpp
         cpp/models/OffensivePlaybook.cpp
         cpp/models/OffensiveScheme.cpp
-        cpp/player/PlayAssignment.cpp)
+        cpp/player/PlayAssignment.cpp
+        cpp/game_logs/PossessionLog.cpp
+        cpp/game_logs/PossessionLog.h
+)

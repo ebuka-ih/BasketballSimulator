@@ -20,13 +20,17 @@ public class ViewLocator : IDataTemplate
             return null;
 
         var name = param.GetType().FullName!.Replace("ViewModel", "View", StringComparison.Ordinal);
-        var type = Type.GetType(name);
-
+        
+        if (param.GetType().Name == "GamePanelViewModel")
+        {
+            name = "BasketballEngine.Desktop.Views.Game.GamePanelView";
+        }
+        var type = typeof(ViewLocator).Assembly.GetType(name);
+        
         if (type != null)
         {
             return (Control)Activator.CreateInstance(type)!;
         }
-
         return new TextBlock { Text = "Not Found: " + name };
     }
 
