@@ -6,7 +6,7 @@
 #define BASKETBALLENGINE_PLAYEREVALUTATIONS_H
 
 
-class PlayerEvalutations {
+class PlayerEvalutation {
 private:
     int season;
     int gamesPlayed;

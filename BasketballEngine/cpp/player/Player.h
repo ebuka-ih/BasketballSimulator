@@ -43,15 +43,16 @@ private:
     // Contract contract
     // Team team
     // Personality personality
-    optional<Stats> stats;
+    Stats stats;
 public:
-    explicit Player(const Position position) : id(nextId++), position(position) {
+    explicit Player(const Position position) : id(nextId++), position(position), stats(Stats()) {
     }
 
     [[nodiscard]] const optional<Coordinate>& getCoordinate() const { return coordinate; }
     [[nodiscard]] OffensivePlay* getCurrentPlay() const;
     [[nodiscard]] PlayAssignment* getPlayAssignment() const;
     [[nodiscard]] Team* getTeam() const { return team; }
+    [[nodiscard]] Stats getStats() const { return stats; }
 
     void setCoordinate(const Coordinate& pos) { this->coordinate = pos; }
     [[nodiscard]] Position getPosition() const {  return position; }

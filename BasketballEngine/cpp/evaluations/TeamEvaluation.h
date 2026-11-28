@@ -4,7 +4,7 @@
 
 #ifndef BASKETBALLENGINE_TEAMEVALUATION_H
 #define BASKETBALLENGINE_TEAMEVALUATION_H
-
+#include "../team/Team.h"
 
 class TeamEvaluation {
     private:

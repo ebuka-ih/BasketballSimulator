@@ -5,6 +5,10 @@
 #include "Ball.h"
 Ball::Ball(Game& game) : game(&game){
 }
+void Ball::setHolder(Player *holder) {
+    this->holder = holder;
+}
+
 const Coordinate& Ball::getPosition() const {
     return position;
 }

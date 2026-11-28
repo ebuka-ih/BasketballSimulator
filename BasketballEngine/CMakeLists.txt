@@ -4,7 +4,6 @@ project(BasketballEngine)
 set(CMAKE_CXX_STANDARD 20)
 
 add_library(BasketballEngine SHARED library.cpp
-        cpp/player/Stats.cpp
         cpp/arena/Arena.h
         cpp/arena/Arena.cpp
         cpp/fans/Fanbase.h
@@ -30,12 +29,10 @@ add_library(BasketballEngine SHARED library.cpp
         BasketballEngine.h
         cpp/game/objects/Ball.cpp
         snapshots/GameSnapshot.h
-        cpp/pathfinder/Pathfinder.cpp
         cpp/logic/CoachLogic.h
         cpp/logic/CoachLogic.h
         cpp/logic/CoachLogic.cpp
         cpp/logic/AnalystLogic.cpp
-        cpp/game_logs/PossessionLog.cpp
         cpp/management/Analyst.cpp
         cpp/management/Contract.cpp
         cpp/management/FinancePlan.cpp
@@ -46,6 +43,6 @@ add_library(BasketballEngine SHARED library.cpp
         cpp/models/OffensivePlaybook.cpp
         cpp/models/OffensiveScheme.cpp
         cpp/player/PlayAssignment.cpp
-        cpp/game_logs/PossessionLog.cpp
-        cpp/game_logs/PossessionLog.h
-)
+        cpp/game/PlayerActions.h
+        cpp/game/PlayerActions.cpp
+        cpp/game/mechanics/shooting/ShotTrajectory.h)

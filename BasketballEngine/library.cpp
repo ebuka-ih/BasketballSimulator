@@ -9,6 +9,7 @@
 #include "cpp/game/Game.h"
 #include "cpp/utils/TimeUtil.h"
 #include "BasketballEngine.h"
+#include "cpp/game/PlayerActions.h"
 #include "snapshots/GameSnapshot.h"
 using namespace std;
 string convertQuarter(int seconds);
@@ -40,6 +41,7 @@ void hello() {
 
     const int g = registry.createGame(Game::GameType::REGULAR_SEASON, &home, &away);
     Game* game = registry.getGame(g);
+    game->getBall().setHolder(&p1);
     GameGrid& grid = game->getGrid();
     grid.setCoordinate(p1, Coordinate(10, 10));
     grid.setCoordinate(p2, Coordinate(15, 10));
@@ -71,6 +73,7 @@ void hello() {
         elapsed++;
         game->tick();
         this_thread::sleep_until(next_tick);
+       // PlayerActions::shoot(*game, p1);
     }
 };
 void getPlayerPositions(const int gameID, Coordinate *positions) {
@@ -89,6 +92,7 @@ void getPlayerPositions(const int gameID, Coordinate *positions) {
     }
 }
 bool GetGameSnapshot(const int gameId, GameSnapshot* gameSnapshot) {
+    cout << "CHECK [1]" << endl;
     if (gameSnapshot == nullptr) {
         cout << "SNAPSHOT IS NULL" << endl;
         return false;
@@ -100,6 +104,7 @@ bool GetGameSnapshot(const int gameId, GameSnapshot* gameSnapshot) {
         cout << "GAME DOES NOT EXIST OR IS NULL" << endl;
         return false;
     }
+    cout << "CHECK [2]" << endl;
     const auto& clock = game->getClock();
     const string gameTime = TimeUtil::formatGameTime(clock.getTimeLeft(), 60);
     const string shotClockTime = TimeUtil::formatGameTime(clock.getShotClockTime(), 5);
@@ -111,7 +116,11 @@ bool GetGameSnapshot(const int gameId, GameSnapshot* gameSnapshot) {
 
     int homeIndex = 0;
     int awayIndex = 0;
+    cout << "CHECK [3]" << endl;
     for (const Player* player : game->getGrid().getPlayers()) {
+        if (player == nullptr) {
+            continue;
+        }
         PlayerSnapshot playerSnapshot{};
         playerSnapshot.id = player->getId();
         playerSnapshot.position = player->getPosition();
@@ -130,10 +139,14 @@ bool GetGameSnapshot(const int gameId, GameSnapshot* gameSnapshot) {
             awaySnapshot.players[awayIndex++] = playerSnapshot;
         }
     }
+    cout << "CHECK [4]" << endl;
     gameSnapshot->id = gameId;
     snprintf(gameSnapshot->gameClock, sizeof(gameSnapshot->gameClock), "%s", gameTime.c_str());
+    cout << "CHECK [5]" << endl;
     snprintf(gameSnapshot->shotClock, sizeof(gameSnapshot->shotClock), "%s", shotClockTime.c_str());
+    cout << "CHECK [6]" << endl;
     snprintf(gameSnapshot->period, sizeof(gameSnapshot->period), "%s",  period.c_str());
+    cout << "CHECK [7]" << endl;
     gameSnapshot->clockActive = game->getClock().isRunning();
 
     homeSnapshot.id = home->getId();
@@ -144,5 +157,23 @@ bool GetGameSnapshot(const int gameId, GameSnapshot* gameSnapshot) {
 
     gameSnapshot->home = homeSnapshot;
     gameSnapshot->away = awaySnapshot;
+    cout << "CHECK [8]" << endl;
+    cout << "SNAPSHOT INFORMATION" << endl;
+    cout << "ID: " << gameSnapshot->id << endl;
+    cout << "CLOCK ACTIVE: " << gameSnapshot->clockActive << endl;
+    cout << "GAME CLOCK: " << gameSnapshot->gameClock << endl;
+    cout << "SHOT CLOCK: " << gameSnapshot->shotClock << endl;
+    cout << "PERIOD: " << gameSnapshot->period << endl;
+    cout << "TEAM INFORMATION: " << endl;
+    cout << "HOME ID: " << gameSnapshot->home.id << endl;
+    cout << "AWAY ID: " << gameSnapshot->away.id << endl;
+    cout << "HOME PLAYERS: " << endl;
+    for (const PlayerSnapshot snap : gameSnapshot->home.players) {
+        cout  << "PLAYER: " << snap.id << " HAS POSITION: " << snap.hasCoordinate << endl;
+    }
+    cout << "\n" << "AWAY PLAYERS: " << endl;
+    for (const PlayerSnapshot snap : gameSnapshot->away.players) {
+        cout  << "PLAYER: " << snap.id << " HAS POSITION: " << snap.hasCoordinate << endl;
+    }
     return true;
 }

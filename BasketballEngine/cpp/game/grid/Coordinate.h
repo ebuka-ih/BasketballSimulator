@@ -4,11 +4,9 @@
 
 #ifndef BASKETBALLENGINE_COORDINATE_H
 #define BASKETBALLENGINE_COORDINATE_H
-
-
 struct Coordinate {
-    int x;
-    int y;
+    double x;
+    double y;
 };
 
 

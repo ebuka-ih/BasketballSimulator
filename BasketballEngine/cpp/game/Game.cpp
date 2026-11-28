@@ -1,5 +1,6 @@
 #include "Game.h"
 
+#include <algorithm>
 #include <iostream>
 #include <sstream>
 using namespace std;
@@ -97,3 +98,12 @@ string Game::getPhaseString() const {
     }
     return "";
 }
+Coordinate Game::getBasketCoordinate(const Player &player) const {
+    const bool isHome = ranges::any_of(home->getPlayers(), [&](const unique_ptr<Player>& p) { return p->getId() == player.getId(); });
+    if (const bool firstHalf = period == GamePeriod::FIRST_QUARTER || period == GamePeriod::SECOND_QUARTER; isHome == firstHalf) {
+        return grid.getLeftBasket().getPosition();
+    }
+    return grid.getRightBasket().getPosition();
+}
+
+

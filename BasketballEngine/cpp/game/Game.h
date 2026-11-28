@@ -89,6 +89,7 @@ public:
     [[nodiscard]] const GameClock& getClock() const { return clock; }
     [[nodiscard]] GameType getGameType() const { return gameType; }
     [[nodiscard]] PossessionState getPossessionState() const { return possessionState; }
+    [[nodiscard]] Coordinate getBasketCoordinate(const Player& player) const;
     [[nodiscard]] GamePeriod getPeriod() const { return period; }
     [[nodiscard]] GamePhase getPhase() const { return phase; }
     [[nodiscard]] int getQuarter() const { return quarter; }

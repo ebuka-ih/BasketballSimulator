@@ -4,11 +4,12 @@
 
 #ifndef BASKETBALLENGINE_ANALYSTLOGIC_H
 #define BASKETBALLENGINE_ANALYSTLOGIC_H
-
-
+#include "../evaluations/TeamEvaluation.h"
+#include "../evaluations/LineupEvaluation.h"
+#include "../evaluations/PlayerEvalutation.h"
 class AnalystLogic {
     public:
-    PlayerEvaluation evaluatePlayer();
+    PlayerEvalutation evaluatePlayer();
     TeamEvaluation evaluateTeam();
     TeamEvaluation analyzeOpponent();
 
@@ -18,7 +19,7 @@ class AnalystLogic {
     void predictionPerformance();
     void predictInjury();
 
-    DrillCategory recommendPracticeFocus();
+    // DrillCategory recommendPracticeFocus();
 
     LineupEvaluation evaluateLineup();
 
